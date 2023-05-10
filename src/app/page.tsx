@@ -8,8 +8,7 @@ import { Typography } from "@/components/typography";
 import { Overlay } from "@/components/overlay";
 import { Html } from "@react-three/drei";
 
-const LINE_1 = "water displacement";
-const LINE_2 = "Hello There";
+const LINE = "Hello There";
 const SIZE = 14;
 
 function Loader() {
@@ -30,12 +29,12 @@ export default function Page() {
         <PerspectiveCamera position={[0, 0, 50]} makeDefault />
         <Suspense fallback={<Loader />}>
           <Bubble />
-          <Typography LINE_1={LINE_1} LINE_2={LINE_2} SIZE={SIZE} />
+          <Typography LINE={LINE} SIZE={SIZE} />
           <Environment preset="warehouse" />
         </Suspense>
       </Canvas>
       {/* Smoke and mirrors – render invisible DOM above canvas*/}
-      <Overlay LINE_1={LINE_1} LINE_2={LINE_2} SIZE={SIZE} />
+      <Overlay LINE={LINE} SIZE={SIZE} />
     </>
   );
 }

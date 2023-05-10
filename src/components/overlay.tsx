@@ -1,26 +1,10 @@
 interface OverlayProps {
-  LINE_1: string;
-  LINE_2: string;
+  LINE: string;
   SIZE: number;
 }
 
-export const Overlay = ({ LINE_1, LINE_2, SIZE }: OverlayProps) => (
+export const Overlay = ({ LINE, SIZE }: OverlayProps) => (
   <>
-    <span
-      style={{
-        position: "absolute",
-        bottom: "50%",
-        left: "50%",
-        fontSize: `${SIZE / 7}vw`,
-        fontWeight: 200,
-        lineHeight: 1,
-        color: "hsla(0, 100%, 50%, 0)",
-        transform: "translateX(-50%) translateY(calc(50% - 20vh))",
-        whiteSpace: "nowrap",
-      }}
-    >
-      {LINE_1}
-    </span>
     <span
       style={{
         position: "absolute",
@@ -34,7 +18,7 @@ export const Overlay = ({ LINE_1, LINE_2, SIZE }: OverlayProps) => (
         whiteSpace: "nowrap",
       }}
     >
-      {LINE_2}
+      {LINE}
     </span>
     <span
       style={{
